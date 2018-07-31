@@ -1,0 +1,27 @@
+<p>
+  task-list works!
+</p>
+
+<form  (submit)="addTask()">
+  <h3>Add a New Task</h3>
+
+  <label>Title</label>
+  <input [(ngModel)]="theNewTask.title" name="blah" type="text">
+
+  <label>Content</label>
+  <input [(ngModel)]="theNewTask.description" name="blah" type="text">
+
+
+  <button>Submit</button>
+
+</form>
+
+
+<div *ngFor="let oneTask of tasks">
+
+  <h3>{{oneTask.title}}</h3>
+  <p>{{oneTask.description}}</p>
+  <p>Completed: {{oneTask.doneyet}}</p>
+  <!-- <a [routerLink]="['tasks', oneTask._id]">See Details</a> -->
+
+</div>
